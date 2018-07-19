@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "image": "./images/2017-Lexus-LC-500h.jpg",
+    "alt": "2017 Lexus LC 500h"
+  },
+  {
+    "id": 2,
+    "image": "./images/2017-Mini-Countryman.jpg",
+    "alt": "2017 Mini Countryman"
+  },
+  {
+    "id": 3,
+    "image": "./images/2017-Tesla-Model-S.jpg",
+    "alt": "2017 Tesla Model S"
+  },
+  {
+    "id": 4,
+    "image": "./images/2018-Audi-A7.jpg",
+    "alt": "2018 Audi A7"
+  },
+  {
+    "id": 5,
+    "image": "./images/2018-Honda-Civic_Type_R.jpg",
+    "alt": "2018 Honda Civic Type R"
+  },
+  {
+    "id": 6,
+    "image": "./images/2018-Mazda-6.jpg",
+    "alt": "2018 Mazda 6"
+  },
+  {
+    "id": 7,
+    "image": "./images/2018-Nissan-GT-R.jpg",
+    "alt": "2018 Nissan GT-R"
+  },
+  {
+    "id": 8,
+    "image": "./images/2018-Subaru-WRX-2018.jpg",
+    "alt": "2018 Subaru WRX"
+  },
+  {
+    "id": 9,
+    "image": "./images/2018-Toyota-Camry.jpg",
+    "alt": "2018 Toyota Camry"
+  },
+  {
+    "id": 10,
+    "image": "./images/2019-BMW-M5.jpg",
+    "alt": "2019 BMW M5"
+  },
+  {
+    "id": 11,
+    "image": "./images/2019-Porsche-911_GT3_RS.jpg",
+    "alt": "2019 Porsche 911 GT3 RS"
+  },
+  {
+    "id": 12,
+    "image": "./images/2019-Volvo-S60.jpg",
+    "alt": "2019 Volvo S60"
+  }
+]
