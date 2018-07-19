@@ -7,7 +7,11 @@ import cars from "./cars.json";
 
 class App extends Component {
   state = {
-    cars: cars
+    cars: cars,
+    clicked: [],
+    score: 0,
+    topScore: 0,
+    message: "Click an image to begin!"
   };
 
   shuffleCars = (array) => {
@@ -27,25 +31,73 @@ class App extends Component {
     }
 
     return array;
-  }
+  };
 
-  clickCar = () => {
-    console.log("CLICKED!!!");
-    this.setState({ cars: cars });
-  }
+  // Click method when an image is clicked
+  clickCar = id => {
+    // Push the ID into the clicked array if it doesn't exist
+    if(this.state.clicked.indexOf(id) === -1 ) {
+      this.state.clicked.push(id);
+      console.log(this.state.clicked);
+
+      let newScore = this.state.score + 1;
+
+      // If the score is great than the top score
+      if (newScore > this.state.topScore) {
+        // Add 1 to top score
+        var newTopScore = this.state.topScore + 1;
+      }
+      else {
+        // Else keep top score equal to top score
+        var newTopScore = this.state.topScore;
+      }
+
+      this.setState({
+
+        // Add 1 to the score
+        score: newScore,
+
+        // Add 1 to the top score
+        topScore: newTopScore
+      });
+
+      console.log("score: " + this.state.score);
+      console.log("top score: " + this.state.score);
+    }
+    else {
+      console.log("LOSER!!!");
+      this.displayMessage("loser");
+    }
+  };
+
+  displayMessage = (message) => {
+    switch(message) {
+      case "loser":
+      this.setState({
+        score: 0,
+        clicked: [],
+        message: "You guessed incorrectly!!!"
+      });
+      break;
+    }
+  };
 
   render() {
     let cars = this.shuffleCars(this.state.cars);
     return (
       <div>
-        <Nav />
+        <Nav
+          score={this.state.score}
+          topScore={this.state.topScore}
+          message={this.state.message}
+         />
         <Jumbotron />
         <div className="container">
           <div className="row">
-            {cars.map((car, id) => (
+            {cars.map(car => (
               <CarCard
-                id={id}
-                key={id}
+                id={car.id}
+                key={car.id}
                 alt={car.alt}
                 image={car.image}
                 clickCar={this.clickCar}

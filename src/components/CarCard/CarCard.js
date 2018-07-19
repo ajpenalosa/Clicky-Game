@@ -5,7 +5,7 @@ const CarCard = props => (
     <div className="col-sm-3">
         <div className="card">
             <div className="img-container">
-                <img alt={props.alt} src={props.image} className="img-fluid" onClick={() => props.clickCar()} />
+                <img alt={props.alt} src={props.image} className="img-fluid" onClick={() => props.clickCar(props.id)} />
             </div>
         </div>
     </div>
