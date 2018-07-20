@@ -1,11 +1,22 @@
 .card {
     margin-bottom: 20px;
-    border-radius: 16px;
-    overflow: hidden;
-    border: 5px solid #FFF;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    border: 0;
 }
 
 .card img {
     cursor: pointer;
+    border-radius: 16px;
+    border: 5px solid #FFF;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    transition: all .2s ease;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+}
+
+.card img:hover {
+    transform: scale(1.1);
+}
+
+.card img:active {
+    transform: scale(1);
 }
