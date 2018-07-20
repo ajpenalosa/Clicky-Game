@@ -11,6 +11,7 @@ class App extends Component {
     cars: cars,
     clicked: [],
     wrapperClass: "wrapper",
+    messageClass: "nav-message",
     score: 0,
     topScore: 0
   };
@@ -64,7 +65,8 @@ class App extends Component {
         score: newScore,
         // Add 1 to the top score
         topScore: newTopScore,
-        wrapperClass: "wrapper"
+        wrapperClass: "wrapper",
+        messageClass: "nav-message"
       });
 
       console.log("score: " + this.state.score);
@@ -77,7 +79,8 @@ class App extends Component {
       this.setState({
         score: 0,
         clicked: [],
-        wrapperClass: "wrapper wrong"
+        wrapperClass: "wrapper wrong",
+        messageClass: "nav-message incorrect"
       });
     }
   };
@@ -87,6 +90,7 @@ class App extends Component {
     return (
       <div>
         <Nav
+          class={this.state.messageClass}
           score={this.state.score}
           topScore={this.state.topScore}
           message={this.message}

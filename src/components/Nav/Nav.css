@@ -1,3 +1,14 @@
+@keyframes incorrect {
+    from {
+        color: #FF0000;
+        transform: scale(1.2);
+    }
+    to {
+        color: #FFF;
+        transform: scale(1);
+    }
+}
+
 .navbar {
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.7);
 }
@@ -18,4 +29,8 @@
 
 .navbar-dark .navbar-text h4 {
     margin-bottom: 0; 
+}
+
+.incorrect {
+    animation: incorrect 1s;
 }

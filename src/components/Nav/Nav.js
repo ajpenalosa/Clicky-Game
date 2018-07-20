@@ -7,7 +7,7 @@ const Nav = props => (
         <div className="container">
             <a className="navbar-brand" href="/">Clicky Game</a>
 
-            <span className="nav-message">{props.message}</span>
+            <span className={props.class}>{props.message}</span>
 
             <span className="navbar-text">
                 <h4>Score: {props.score} | Top Score: {props.topScore}</h4>
